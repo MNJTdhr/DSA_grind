@@ -1,6 +1,8 @@
 #include <iostream>
 #include <math.h>
 using namespace std;
+
+int numReverserMyWay(int n);
 int numReverser(int n);
 int numDigitCounter(int n);
 int main()
@@ -10,10 +12,22 @@ int main()
     std::cin >> num;
 
     cout << numReverser(num);
+    // cout << numReverserMyWay(num);
     return 0;
 }
 
-int numReverser(int n)
+int numReverser(int n){
+    int orinum=n, s=0, r=1;
+    while(n!=0){
+        r=n%10;
+        s=s*10+r;
+        n=n/10;
+    }
+    return s;
+}
+
+
+int numReverserMyWay(int n)
 {
     int sum = 0, r, mul{1};
     int x = numDigitCounter(n);
