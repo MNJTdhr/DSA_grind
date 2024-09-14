@@ -3,12 +3,11 @@
 
 using namespace std;
 
-int main()
-{
+int main(){
     vector<int> vec;
-    vector<int> vec2 = {1, 2, 3, 1, 2};
-
     // cout<<vec[0]; an error
+
+    vector<int> vec2 = {1, 2, 3, 1, 2};
     cout << vec2[0] << endl;
 
     vector<int> vec3(3, 0);
