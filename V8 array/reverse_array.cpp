@@ -4,7 +4,7 @@ using namespace std;
 int arrReverser(int arr[], int size);
 
 int main(){
-    int arr[] = {1, 2, 3, 6, 4, 7, 8, 11, 46};
+    int arr[] = {1, 2, 3, 4, 5, 6};
     int size = sizeof(arr) / sizeof(arr[0]);
 
     cout << "Original array: ";
@@ -12,8 +12,9 @@ int main(){
         cout << arr[i] << ' ';
     }
     cout << "\nTotal size of the array: " << size;
-
-    cout << "\nReversed array: ";
+    cout<<endl;
+    
+    cout << "Reversed array: ";
     arrReverser(arr, size);
 
     return 0;
