@@ -2,32 +2,30 @@
 #include <vector>
 using namespace std;
 
-int pairSum(int arr[], int size, int n){
-    int ans=0;
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = i+1; j < size; j++)
-        {
-            if(arr[i]+arr[j]==n){
-                ans=ans+arr[i]+arr[j];
-                cout<<"Matches with: "<<arr[i]<<"+"<<arr[j]<<"="<<ans<<endl;
-                return 1;
+vector<int> pairSum(vector<int> vec, int target){
+    vector<int> ans;
+    int n = vec.size();
+
+    for (int i = 0; i < n; i++){
+        for (int j = i + 1; j < n; j++){
+            if (vec[i] + vec[j] == target){
+                ans.push_back(i);
+                ans.push_back(j);
+                return ans;
             }
         }
     }
-    return 0;
+    return ans;
 }
 
-int main(){
-    int arr[] = {2,7,11,15};
-    int n=13;
-    int size = sizeof(arr) / sizeof(int);
-    
-    int result=pairSum(arr, size, n);
-    if (result==0)
-    {
-        cout<<"No Matches found with "<<n<<endl;
-    }
-    
+int main()
+{
+    vector<int> vec = {2, 7, 11, 15};
+    int target = 13;
+
+    vector<int> result = pairSum(vec, target);
+
+    cout << "Vector Array: " << result[0]<<", " << result[1]<< endl;
+
     return 0;
 }
