@@ -23,6 +23,5 @@ int findMaxProfit(int arr[], int size){
         
         bestBuy=min(bestBuy,arr[i]);
     }
-    
     return maxProfit;
 }
