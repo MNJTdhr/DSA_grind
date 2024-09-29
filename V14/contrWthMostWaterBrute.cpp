@@ -7,7 +7,6 @@ int MostWater(vector<int> arr);
 
 int main(){
     vector<int> arr = {1,8,6,2,5,4,8,3,7};
-    int size = sizeof(arr) / sizeof(int);
     
     int ans = MostWater(arr);
     cout << "Most Water: " << ans;
