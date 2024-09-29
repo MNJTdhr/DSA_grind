@@ -1,23 +1,39 @@
-// leetcode Question 11
+// leetcode Question 238
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int prodOfArrXnumX(vector<int> arr, int n);
+vector<int> prodOfarrXnumX(vector<int> vec);
 
 int main(){
-    vector<int> arr = {1,2,3,4};
-    int n=2;
+    vector<int> vec = {-1,1,0,-3,3};
 
-    int ans = prodOfArrXnumX(arr, n);
-    cout << "Product: " << ans;
+    vector<int> ansVec = prodOfarrXnumX(vec);
+    
+    for (int j : ansVec)
+    {
+        cout << j << ' ';
+    }
 
     return 0;
 }
 
-int prodOfArrXnumX(vector<int> arr, int n){
-    int ans=0;
-    
+vector<int> prodOfarrXnumX(vector<int> vec){
+    int a = 1;
+    vector<int> ansVec;
 
-    return ans;
+    for (int i = 0; i < vec.size(); i++)
+    {
+        for (int j = 0; j < vec.size(); j++)
+        {
+            if (vec[i] != vec[j])
+            {
+                a = a * vec[j];
+            }
+        }
+        ansVec.push_back(a);
+        a = 1;
+    }
+
+    return ansVec;
 }
