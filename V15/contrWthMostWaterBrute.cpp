@@ -6,7 +6,7 @@ using namespace std;
 vector<int> prodOfarrXnumX(vector<int> vec);
 
 int main(){
-    vector<int> vec = {-1,1,0,-3,3};
+    vector<int> vec = {1,2,3,4};
 
     vector<int> ansVec = prodOfarrXnumX(vec);
     
