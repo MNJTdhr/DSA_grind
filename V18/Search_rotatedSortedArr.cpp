@@ -13,14 +13,14 @@ int searchRSA(vector<int> vec, int key){
         }
         if (vec[start]<=vec[mid]){
             if (vec[start]<=key && key<=vec[mid]){
-                end=mid-1;
+                end=mid-1;          // for vec={4,5,6,7,0,1,2}
             } else{
                 start=mid+1;
             }
         }
         else{
             if (vec[mid]<=key && key<=vec[end]){
-                start=mid+1;
+                start=mid+1;        // for vec={4,5,6,0,1,2,3}
             } else{
                 end=mid-1;
             }
