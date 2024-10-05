@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
 int binarySearch(vector<int> vec, int target){
@@ -24,6 +25,8 @@ int binarySearch(vector<int> vec, int target){
 
 int main(){
     vector<int> vec = {1,2,3,4,5,6};
+
+    sort(vec.begin(), vec.end());
 
     int target = 4;
     int index = binarySearch(vec, target);
