@@ -16,7 +16,7 @@ bool isValid(vector<int> vec, int paint_n, int painters_m, int maxallowedtime_mi
         }
     }
     
-    return paintrs <= painters_m;  // Correct condition
+    return paintrs <= painters_m;
 }
 
 int bookalloc(vector<int> vec, int paint_n, int painters_m) {
