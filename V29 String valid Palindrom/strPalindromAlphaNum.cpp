@@ -1,26 +1,42 @@
-//leetcode q125
 #include <iostream>
 #include <string>
+
 using namespace std;
 
-bool isPalindrome(string str) {
-    int size = str.length();
-    for (int i = 0; i < size / 2; i++) {
-        if (str[i] != str[size - i - 1]) {
+bool isAlphaNum(char ch){
+    if ((ch>='0'&&ch<='9')||(tolower(ch)>='a' && tolower(ch)<='z'))
+    {
+        return true;
+    }
+    return false;
+}
+
+bool isPalindrome(string s) {
+    int start = 0, end = s.length() - 1;
+    while (start < end) {
+        if (!isAlphaNum(s[start])) {
+            start++;
+            continue;
+        }
+        if (!isAlphaNum(s[end])) {
+            end--;
+            continue;
+        }
+        if (tolower(s[start]) != tolower(s[end])) {
             return false;
         }
+        start++;
+        end--;
     }
     return true;
 }
 
 int main() {
-    string str="A man, a plan, a canal: Panama";
-
-    if (isPalindrome(str)) {
-        cout << str << " is a palindrome" << endl;
+    string s = "A man, a plan, a canal: Panama";
+    if (isPalindrome(s)) {
+        cout << "The string is a palindrome." << endl;
     } else {
-        cout << str << " is not a palindrome" << endl;
+        cout << "The string is not a palindrome." << endl;
     }
-
     return 0;
 }
