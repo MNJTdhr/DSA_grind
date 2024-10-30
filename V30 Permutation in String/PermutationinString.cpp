@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string>
 #include <vector>
-
 using namespace std;
 
 bool isFreqSame(const vector<int>& freq, const vector<int>& windFreq) {
