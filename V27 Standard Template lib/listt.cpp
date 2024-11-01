@@ -4,10 +4,10 @@ using namespace std;
 
 int main(){
     list<int> arr={0};
-    arr.push_back(6);
-    arr.push_back(4);
-    arr.push_front(3);
-    arr.push_front(2);
+    arr.push_back(1);
+    arr.push_back(2);
+    arr.push_front(-1);
+    arr.push_front(-2);
     for(int i:arr){
         cout<<i<<" ";
     }
