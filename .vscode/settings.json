@@ -49,6 +49,15 @@
         "xtr1common": "cpp",
         "xutility": "cpp",
         "vector": "cpp",
-        "algorithm": "cpp"
+        "algorithm": "cpp",
+        "array": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "optional": "cpp",
+        "ranges": "cpp",
+        "span": "cpp",
+        "sstream": "cpp",
+        "stack": "cpp",
+        "string": "cpp"
     }
 }
