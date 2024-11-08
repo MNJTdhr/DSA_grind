@@ -2,7 +2,6 @@
 #include <string>
 #include <vector>
 #include <algorithm>
-
 using namespace std;
 
 int stringCompress(string s) {
@@ -28,10 +27,10 @@ int stringCompress(string s) {
     }
     s.resize(idx);
     for (int i = 0; i < size; i++) {
-        cout << s[i] << ' ';
+        cout << s[i] << ' ';    //a 2 b 2 c 3
     }
     cout << endl;
-    return idx;
+    return idx;                 //6
 }
 
 int main() {
