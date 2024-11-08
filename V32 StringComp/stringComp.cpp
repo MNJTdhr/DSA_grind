@@ -28,7 +28,7 @@ int stringCompress(string s) {
     }
     s.resize(idx);
     for (int i = 0; i < size; i++) {
-        cout << s[i] << '\t';
+        cout << s[i] << ' ';
     }
     cout << endl;
     return idx;
