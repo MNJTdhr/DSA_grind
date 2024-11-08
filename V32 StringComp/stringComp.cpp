@@ -27,10 +27,10 @@ int stringCompress(string s) {
     }
     s.resize(idx);
     for (int i = 0; i < size; i++) {
-        cout << s[i] << ' ';    //a 2 b 2 c 3
+        cout << s[i] << ' ';    // a 2 b 2 c 3
     }
     cout << endl;
-    return idx;                 //6
+    return idx;                 // 6
 }
 
 int main() {
